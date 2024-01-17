@@ -18,11 +18,12 @@ export const config: Options.Testrunner = {
         "appium:platformVersion": "11",
         "appium:automationName": "UiAutomator2",
         "appium:newCommandTimeout": 20000,
-        "appium:adbExecTimeout": 20000
+        "appium:adbExecTimeout": 20000,
+        "appium:skipLogCapture": true
     }],
     services: [
         ["appium", {
-            command: 'appium',
+            command: 'appium --allow-insecure=get_server_logs',
             logPath: "./test/logs",
             platformName: "android",
             }
