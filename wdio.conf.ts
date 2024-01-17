@@ -17,7 +17,8 @@ export const config: Options.Testrunner = {
         "platformName": "android",
         "appium:platformVersion": "11",
         "appium:automationName": "UiAutomator2",
-        "appium:newCommandTimeout": 20000
+        "appium:newCommandTimeout": 20000,
+        "appium:adbExecTimeout": 20000
     }],
     services: [
         ["appium", {

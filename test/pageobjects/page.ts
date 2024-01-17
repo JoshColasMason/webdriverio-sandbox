@@ -5,7 +5,7 @@ export class Page {
     public async sayHello () {
 
         let currentTime = await browser.getDeviceTime();
-        console.debug("Hello from the login page class!");
+        console.debug("Hello from the page class!");
         console.debug(`The current time is: ${currentTime}`);
 
     }
