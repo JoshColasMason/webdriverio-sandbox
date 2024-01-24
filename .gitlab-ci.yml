@@ -1,0 +1,17 @@
+default:
+  image: registry.gitlab.com/masonamerica/qa/webdriverio-automation:latest
+
+stages:
+  - Device Lab tests
+
+Sanity tests - Device Lab:
+  stage: Device Lab tests
+  tags:
+    - qa-lab
+  script:
+    - npm i
+    - cd test-configs
+    - npx wdio adb.sanity.conf.ts
+  when: always
+
+

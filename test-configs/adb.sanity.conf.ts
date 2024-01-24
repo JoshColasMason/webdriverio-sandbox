@@ -10,7 +10,7 @@ export const config: Options.Testrunner = {
         }
     },
     specs: [
-        "./test/specs/adb-test.ts"
+        "../specs/adb-sanity-test.ts"
     ],
     capabilities: [{
         "port": 4723,
@@ -19,19 +19,19 @@ export const config: Options.Testrunner = {
         "appium:automationName": "UiAutomator2",
         "appium:newCommandTimeout": 20000,
         "appium:adbExecTimeout": 20000,
-        "appium:skipLogCapture": true
+        "appium:skipLogcatCapture": true
     }],
     services: [
         ["appium", {
-            command: 'appium --allow-insecure=get_server_logs',
-            logPath: "./test/logs",
+            command: 'appium',
+            logPath: "../logs",
             platformName: "android",
             }
         ]
     ],
     logLevel: 'error',   
     framework: 'mocha',
-    outputDir: "./test/logs",
+    outputDir: "../logs",
     reporters: ['spec'],
     mochaOpts: {
         ui: 'bdd',

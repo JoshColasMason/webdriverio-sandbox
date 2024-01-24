@@ -1,0 +1,1 @@
+This is the test automation solution for the Devices team - for use specifically in CICD jobs running on our gitlab test runner in the QA lab. This solution implements the webdriverIO framework as well as Appium and other Android developer tools.
